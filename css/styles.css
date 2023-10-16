@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #e2e2e2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 6px 45px 0px 45px;
+}
+
+.logo img {
+  width: 110px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.user-info span {
+  display: flex;
+  align-items: center;
+}
+
+.user-info p {
+  font-size: 18px;
+}
+
+.nav-links ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-links ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #061927;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Footer */
+.footer {
+  background-color: #212529;
+  color: white;
+  padding: 20px 45px;
+  text-align: center;
+  padding: 25px 45px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer-about p {
+  font-size: 14px;
+}
+
+/* Home Content */
+
+.home-content {
+  background: url("../assets/home-photo.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Package Details */
+
+.pc-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.packages-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 5%;
+}
+
+.package-details-box {
+  background: #fff;
+  width: 90%;
+  padding: 1% 2%;
+  border-radius: 12px;
+}
+
+.package-details-box h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.pcd-info {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.pcd-info p {
+  font-size: 17px;
+}
+
+.pcd-img img {
+  width: 60%;
+  border-radius: 12px;
+}
+.pcd-button {
+  text-align: right;
+  margin-bottom: 1%;
+}
+
+.pcd-button button {
+  color: #fff;
+  background-color: #257dc3;
+  border: none;
+  padding: 2% 4%;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pcd-button button:hover {
+  background-color: #1e6bae;
+}
+
+/* Admin Package */
+
+/* CSS for Tab Buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.tab-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.tab-buttons button.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* CSS for Tab Content */
+.tab-content {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-content.active-content {
+  display: block;
+}
+
+.admin-packages-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 5%;
+}
+
+.tb-buttons {
+  border-radius: 12px;
+  padding: 1%;
+  margin-right: 2%;
+  width: 10%;
+}
+
+.border-radius {
+  border-radius: 12px;
+}
+
+/* Admin Package Form */
+
+.form-all-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-options {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.form-options2 {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.form-options input {
+  width: 100%;
+  padding: 1%;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+.form-options label {
+  width: 19%;
+  text-align: left;
+  font-size: 18px;
+}
+
+.form-options2 label {
+  width: 19%;
+  text-align: left;
+  font-size: 18px;
+}
+
+.form-options2 select {
+  width: 100%;
+  padding: 1%;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.form-options2 input {
+  width: 100%;
+  padding: 1%;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #1e6bae;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 60%;
+  border: 1px solid #888;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Table*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e41f1f;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  padding: 25px 40px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.modal-content h2 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content #saveChanges {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal-content #saveChanges:hover {
+  background-color: #45a049;
+}
